@@ -82,45 +82,45 @@ MergeSort ist viel schneller weil er die Liste immer halbiert statt alles mit al
  
 | Kriterium | OK? |
 |---|---|
-| Script zeigt Min, Max und Durchschnitt der Temperatur | |
-| Ausgabe zeigt Datum, Wert und Einheit | |
-| Bei fehlender Datei kommt eine Fehlermeldung |  |
+| Script zeigt Min, Max und Durchschnitt der Temperatur |X|
+| Ausgabe zeigt Datum, Wert und Einheit |X|
+| Bei fehlender Datei kommt eine Fehlermeldung |X|
  
 **User Story 2**
 > Als Pistenwart möchte ich die Schneehöhen sortiert sehen, damit ich weiss an welchem Tag am meisten Schnee lag.
  
 | Kriterium | OK? |
 |---|---|
-| `merge_sort()` sortiert die Liste richtig |  |
-| Die Liste ist von klein nach gross sortiert |  |
-| Die Originalliste bleibt unverändert |  |
+| `merge_sort()` sortiert die Liste richtig |X|
+| Die Liste ist von klein nach gross sortiert |X|
+| Die Originalliste bleibt unverändert |X|
  
 **User Story 3**
 > Als Stationsleiter möchte ich den Durchschnitt der Windgeschwindigkeit sehen, damit ich gefährliche Wetterlagen früh erkenne.
  
 | Kriterium | OK? |
 |---|---|
-| `durchschnitt()` rechnet den Mittelwert korrekt |  |
-| Ergebnis auf 2 Stellen nach dem Komma gerundet |  |
-| Bei leerer Liste kommt `None` zurück | |
+| `durchschnitt()` rechnet den Mittelwert korrekt |X|
+| Ergebnis auf 2 Stellen nach dem Komma gerundet |X|
+| Bei leerer Liste kommt `None` zurück |X|
  
 **User Story 4**
 > Als nächster Entwickler möchte ich den Code schnell verstehen, damit ich ihn einfach anpassen kann.
  
 | Kriterium | OK? |
 |---|---|
-| Jede Funktion hat eine Erklärung (Docstring) |  |
-| Es gibt ein Ablaufdiagramm für MergeSort |  |
-| Alle Funktionen haben Tests mit 100% Abdeckung |  |
+| Jede Funktion hat eine Erklärung (Docstring) |X|
+| Es gibt ein Ablaufdiagramm für MergeSort |X|
+| Alle Funktionen haben Tests mit 100% Abdeckung |X|
  
 **User Story 5**
 > Als Betriebsleiter möchte ich alle drei Messgrössen auf einmal sehen, damit ich nicht mehrere Scripts starten muss.
  
 | Kriterium | OK? |
 |---|---|
-| `auswertung()` zeigt alle drei Messgrössen |  |
-| Am Ende kommt eine sortierte Temperaturliste |  |
-| Alles startet mit einem Befehl |  |
+| `auswertung()` zeigt alle drei Messgrössen |X|
+| Am Ende kommt eine sortierte Temperaturliste |X|
+| Alles startet mit einem Befehl |X|
  
 ---
  
@@ -269,20 +269,20 @@ START
  
 | Frage | Antwort |
 |---|---|
-| Was habe ich gemacht? | |
-| Was hat gut funktioniert? | |
-| Was war schwierig? | |
-| Was habe ich gelernt? | |
-| Selbsteinschätzung | |
-| Ziel nächste Woche | |
+| Was habe ich gemacht? |Ich habe die Funktionen für Minimum, Maximum und Durchschnitt geschrieben. Danach habe ich die Auswertung erstellt und alle Tests mit pytest durchgeführt.|
+| Was hat gut funktioniert? |Die Berechnungen waren logisch und ich konnte sie schnell programmieren.|
+| Was war schwierig? | Die Testfällen lernen|
+| Was habe ich gelernt? | Ich habe gelernt, wie man mit Tests prüft, ob ein Programm stabil bleibt.|
+| Selbsteinschätzung | Note 5 – Die Funktionen und Tests laufen ohne Fehler.|
+| Ziel nächste Woche |Das Video machen |
  
 ### Woche 4
  
 | Frage | Antwort |
 |---|---|
-| Was habe ich gemacht? | |
-| Was hat gut funktioniert? | |
-| Was war schwierig? | |
-| Was habe ich gelernt? | |
-| Selbsteinschätzung | |
+| Was habe ich gemacht? |Ich habe die Dokumentation fertiggestellt. |
+| Was hat gut funktioniert? |Die Ergebnisse werden im Terminal übersichtlich angezeigt. |
+| Was war schwierig? | Die Erklärung von MergeSort im Video kurz und einfach zu halten.|
+| Was habe ich gelernt? |Wie man ein Projekt abschliesst. |
+| Selbsteinschätzung |Note 5.5 – Alles ist fertig und funktioniert wie geplant.|
 | Ziel nächste Woche | – (Projekt fertig) |
