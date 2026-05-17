@@ -1,5 +1,5 @@
 import pytest
-from Weather_analyser import csv_einlesen, merge_sort, minimum, maximum, durchschnitt
+from weather_analyser import csv_einlesen, merge_sort, minimum, maximum, durchschnitt
 
 BEISPIEL = [
     {"datum": "2024-01-15", "temperatur": -8.2,  "windgeschwindigkeit": 34.0, "schneehoehe": 120.0},
@@ -13,6 +13,7 @@ BEISPIEL = [
 
 def test_csv_einlesen(tmp_path):
     datei = tmp_path / "test.csv"
+    
     datei.write_text("datum;temperatur;windgeschwindigkeit;schneehoehe\n2024-01-15;-8.2;34;120\n", encoding="utf-8")
     res = csv_einlesen(str(datei))
     assert len(res) == 1 and res[0]["temperatur"] == -8.2
@@ -20,7 +21,11 @@ def test_csv_einlesen(tmp_path):
     with pytest.raises(FileNotFoundError):
         csv_einlesen("null.csv")
     
-    datei.write_text("datum;temperatur;windgeschwindigkeit;schneehoehe\n2024-01-15;X;34;120\n")
+    datei.write_text("datum;temperatur;windgeschwindigkeit;schneehoehe\n2024-01-15;X;34;120\n", encoding="utf-8")
+    with pytest.raises(ValueError):
+        csv_einlesen(str(datei))
+
+    datei.write_text("datum;falsche_spalte;windgeschwindigkeit;schneehoehe\n2024-01-15;-8.2;34;120\n", encoding="utf-8")
     with pytest.raises(ValueError):
         csv_einlesen(str(datei))
 
@@ -47,3 +52,8 @@ def test_merge_sort():
     orig = list(BEISPIEL)
     merge_sort(BEISPIEL, "temperatur")
     assert BEISPIEL == orig
+
+    assert merge_sort([], "temperatur") == []
+    
+    ein_element = [{"datum": "2024-01-15", "temperatur": -8.2, "windgeschwindigkeit": 34.0, "schneehoehe": 120.0}]
+    assert merge_sort(ein_element, "temperatur") == ein_element
